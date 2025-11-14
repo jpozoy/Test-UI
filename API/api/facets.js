@@ -1,5 +1,5 @@
 // api/facets.js
-const { getCollection } = require("../../db");
+const { getCollection } = require("../db");
 
 module.exports = async (req, res) => {
   if (req.method !== "GET") {
