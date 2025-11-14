@@ -48,6 +48,10 @@ async function getCollection() {
 
 // ---------- Endpoints (traducción de tu FastAPI) ----------
 
+app.get("/", (req, res) => {
+  res.json({ status: "API OK" });
+});
+
 // GET /api/books?q=...
 app.get("/books", async (req, res) => {
   const q = req.query.q || null;
