@@ -1,4 +1,4 @@
-// api/books/facets.js
+// api/facets.js
 const { getCollection } = require("../../db");
 
 module.exports = async (req, res) => {
