@@ -9,7 +9,7 @@ export interface Book {
   image_url?: string;
 }
 
-const API_URL = import.meta.env.VITE_API_URL || "http://api-service:8000";
+const API_URL = import.meta.env.VITE_API_URL || "http://api-https://api-bd2-alpha.vercel.app/api";
 
 export async function fetchBooks(query?: string): Promise<Book[]> {
   const url = query
@@ -53,7 +53,7 @@ function parseRating(ratingStr: string): number {
 }
 
 export async function fetchBooksFiltered(query: string): Promise<Book[]> {
-  const url = `http://localhost:30080/books?q=${encodeURIComponent(query ?? "")}`;
+  const url = `https://api-bd2-alpha.vercel.app/api/books?q=${encodeURIComponent(query ?? "")}`;
 
   const res = await fetch(url);
   if (!res.ok) throw new Error("Error al obtener libros");
