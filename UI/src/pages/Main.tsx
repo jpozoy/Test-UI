@@ -93,13 +93,13 @@ export default function MainPage() {
           return (
             <GridLibro
               key={i}
-              id={(b as any)._id ?? null}  // opcional, por si quieres pasar el id también
+              id={b.id}  // opcional, por si quieres pasar el id también
               title={b.title}
               description={b.description}
               price={b.price}
               reviews={b.reviews}
               rating={b.rating}
-              link={`/book/${(b as any)._id}`}  
+              link={`/book/${b.id}`}  
             />
           );
         })}

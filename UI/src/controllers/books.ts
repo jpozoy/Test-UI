@@ -9,7 +9,7 @@ export interface Book {
   image_url?: string;
 }
 
-const API_URL = import.meta.env.VITE_API_URL || "http://api-https://api-bd2-alpha.vercel.app/api";
+const API_URL = import.meta.env.VITE_API_URL || "https://api-bd2-alpha.vercel.app/api";
 
 export async function fetchBooks(query?: string): Promise<Book[]> {
   const url = query
